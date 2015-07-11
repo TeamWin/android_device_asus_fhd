@@ -1,24 +1,16 @@
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1080
-TARGET_SCREEN_WIDTH := 1920
-
-# Inherit some common CM stuff.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/asus/fhd/device.mk)
-
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/asus/fhd/overlay
 
 PRODUCT_RUNTIMES := runtime_libart_default
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_fhd
+PRODUCT_NAME := omni_fhd
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_Z00A
 PRODUCT_MANUFACTURER := asus

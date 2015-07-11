@@ -27,7 +27,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalv
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 DEVICE_PACKAGE_OVERLAYS := \
-    device/asus/moorefield/fhd/overlay
+    device/asus/fhd/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/configs/gps.xml:system/etc/gps.xml
+    device/asus/fhd/configs/gps.xml:system/etc/gps.xml
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -85,7 +85,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # specific management of audio_policy.conf
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/configs/audio_policy.conf:system/etc/audio_policy.conf
+    device/asus/fhd/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # Add props used in stock
 PRODUCT_PROPERTY_OVERRIDES +=  \
@@ -107,8 +107,8 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.isUsbOtgEnabled=1
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
 
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf \
-    device/asus/moorefield/fhd/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal 
+    device/asus/fhd/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf \
+    device/asus/fhd/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.hfp.WideBandSpeechEnabled=true
@@ -120,13 +120,13 @@ PRODUCT_PACKAGES += \
 
 #Video
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/media/media_profiles.xml:system/etc/media_profiles.xml \
-    device/asus/moorefield/fhd/media/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
+    device/asus/fhd/media/media_profiles.xml:system/etc/media_profiles.xml \
+    device/asus/fhd/media/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    device/asus/moorefield/fhd/media/media_codecs.xml:system/etc/media_codecs.xml \
-    device/asus/moorefield/fhd/media/mfx_omxil_core.conf:system/etc/mfx_omxil_core.conf \
-    device/asus/moorefield/fhd/media/video_isv_profile.xml:system/etc/video_isv_profile.xml
+    device/asus/fhd/media/media_codecs.xml:system/etc/media_codecs.xml \
+    device/asus/fhd/media/mfx_omxil_core.conf:system/etc/mfx_omxil_core.conf \
+    device/asus/fhd/media/video_isv_profile.xml:system/etc/video_isv_profile.xml
 
 # psb video
 PRODUCT_PACKAGES += \
@@ -218,7 +218,7 @@ PRODUCT_PACKAGES += \
     bcmdhd.cal
 
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
+    device/asus/fhd/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -248,22 +248,22 @@ PRODUCT_COPY_FILES += \
 
 # Key layout files
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/keylayout/ASUS_TransKeyboard.kl:system/usr/keylayout/ASUS_TransKeyboard.kl \
-    device/asus/moorefield/fhd/keylayout/ftxxxx_ts.kl:system/usr/keylayout/ftxxxx_ts.kl \
-    device/asus/moorefield/fhd/keylayout/ftxxxx_ts.kcm:system/usr/keychars/ftxxxx_ts.kcm \
-    device/asus/moorefield/fhd/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/asus/moorefield/fhd/keylayout/lm49453-audio_Intel_MID_Audio_Jack.kl:system/usr/keylayout/lm49453-audio_Intel_MID_Audio_Jack.kl \
-    device/asus/moorefield/fhd/keylayout/Vendor_0b05_Product_17fc.kl:system/usr/keylayout/Vendor_0b05_Product_17fc.kl \
-    device/asus/moorefield/fhd/keylayout/Vendor_0b05_Product_1803.kl:system/usr/keylayout/Vendor_0b05_Product_1803.kl
+    device/asus/fhd/keylayout/ASUS_TransKeyboard.kl:system/usr/keylayout/ASUS_TransKeyboard.kl \
+    device/asus/fhd/keylayout/ftxxxx_ts.kl:system/usr/keylayout/ftxxxx_ts.kl \
+    device/asus/fhd/keylayout/ftxxxx_ts.kcm:system/usr/keychars/ftxxxx_ts.kcm \
+    device/asus/fhd/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/asus/fhd/keylayout/lm49453-audio_Intel_MID_Audio_Jack.kl:system/usr/keylayout/lm49453-audio_Intel_MID_Audio_Jack.kl \
+    device/asus/fhd/keylayout/Vendor_0b05_Product_17fc.kl:system/usr/keylayout/Vendor_0b05_Product_17fc.kl \
+    device/asus/fhd/keylayout/Vendor_0b05_Product_1803.kl:system/usr/keylayout/Vendor_0b05_Product_1803.kl
 
 #GFX Config
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/powervr.ini:system/etc/powervr.ini
+    device/asus/fhd/powervr.ini:system/etc/powervr.ini
 
 # NFC
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/asus/moorefield/fhd/nfc/libnfc-brcm-20795a20.conf:system/etc/libnfc-brcm-20795a20.conf
+    device/asus/fhd/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/asus/fhd/nfc/libnfc-brcm-20795a20.conf:system/etc/libnfc-brcm-20795a20.conf
 
 # NFC packages
 PRODUCT_PACKAGES += \
@@ -289,7 +289,7 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339
 
 # specific management of sep_policy.conf
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/sep_policy.conf:system/etc/security/sep_policy.conf
+    device/asus/fhd/sep_policy.conf:system/etc/security/sep_policy.conf
 
 # hardware optimizations
 #PRODUCT_PROPERTY_OVERRIDES += \
@@ -297,5 +297,5 @@ PRODUCT_COPY_FILES += \
 
 # Hack my logs
 PRODUCT_COPY_FILES += \
-    device/asus/moorefield/fhd/10logcat:system/etc/init.d/10logcat \
-    device/asus/moorefield/fhd/20kmsg:system/etc/init.d/20kmsg
+    device/asus/fhd/10logcat:system/etc/init.d/10logcat \
+    device/asus/fhd/20kmsg:system/etc/init.d/20kmsg
